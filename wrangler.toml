@@ -10,6 +10,6 @@ binding = "past_KV"
 id = "bc4dcc7e532448aa8f4e0c5fa0502682"
 
  [vars]
- Please set them as the secret in cloudflare
+ #Please set them as the secret in cloudflare
  API_KEY = ""
  GPT_BASE = ""
