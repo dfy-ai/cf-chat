@@ -5,8 +5,8 @@ main = "src/index.ts"
 [ai]
 binding = "AI"
 
-[[past_KV]]
-binding = "PKV"
+[[kv_namespaces]]
+binding = "past_KV"
 id = "bc4dcc7e532448aa8f4e0c5fa0502682"
 
 # [vars]
