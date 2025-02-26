@@ -5,7 +5,7 @@ main = "src/index.ts"
 [ai]
 binding = "AI"
 
-[kv_namespaces]
+[[kv_namespaces]]
 binding = "PKV"
 id = "bc4dcc7e532448aa8f4e0c5fa0502682"
 
