@@ -12,17 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4.1.0
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 8
-
-      - name: Setup Node.js 20
+      - name: Setup Node.js 20 and pnpm
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
-          cache: "pnpm"
+          cache: "pnpm"  # CORRECTED: Enable pnpm caching, set up node.
+
       - name: Install dependencies
         run: pnpm install
 
@@ -30,5 +25,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3.7.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          projectDir: ./     #If you kept your wrangler.toml in the same directory
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+
